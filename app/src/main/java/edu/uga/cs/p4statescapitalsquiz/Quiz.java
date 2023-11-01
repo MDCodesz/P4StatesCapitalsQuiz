@@ -7,7 +7,7 @@ public class Quiz {
     private long   id;
     private Date quizDate;
     private Time quizTime;
-    private String quizResult;
+    private Integer quizResult; // int?
 
     public Quiz()
     {
@@ -17,7 +17,7 @@ public class Quiz {
         this.quizResult = null;
     }
 
-    public Quiz( Date quizDate, Time quizTime, String quizResult ) {
+    public Quiz( Date quizDate, Time quizTime, Integer quizResult ) {
         this.id = -1;  // the primary key id will be set by a setter method
         this.quizDate = quizDate;
         this.quizTime = quizTime;
@@ -54,12 +54,12 @@ public class Quiz {
         this.quizTime = quizTime;
     }
 
-    public String getResult()
+    public Integer getResult()
     {
         return quizResult;
     }
 
-    public void setResult(String quizResult)
+    public void setResult(Integer quizResult)
     {
         this.quizResult = quizResult;
     }
