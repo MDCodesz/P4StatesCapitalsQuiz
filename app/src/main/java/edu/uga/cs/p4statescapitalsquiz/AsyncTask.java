@@ -1,10 +1,11 @@
 package edu.uga.cs.p4statescapitalsquiz;
 
-import android.os.Handler;
-import android.os.Looper;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import android.os.Handler;
+import android.os.Looper;
 
 
 /** This is a replacement class for the Android's  AsyncTask class.

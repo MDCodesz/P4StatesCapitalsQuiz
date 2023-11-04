@@ -3,7 +3,7 @@ package edu.uga.cs.p4statescapitalsquiz;
 
 /**
  * This class (a POJO) represents a single job lead, including the id, company name,
- * capital number, URL, and some cityTwo.
+ * capitalCity number, URL, and some thirdCity.
  * The id is -1 if the object has not been persisted in the database yet, and
  * the db table's primary key value, if it has been persisted.
  */
@@ -11,25 +11,25 @@ public class Question {
 
     private long   id;
     private String stateName;
-    private String capital;
-    private String cityOne;
-    private String cityTwo;
+    private String capitalCity;
+    private String secondCity;
+    private String thirdCity;
 
     public Question()
     {
         this.id = -1;
         this.stateName = null;
-        this.capital = null;
-        this.cityOne = null;
-        this.cityTwo = null;
+        this.capitalCity = null;
+        this.secondCity = null;
+        this.thirdCity = null;
     }
 
-    public Question( String stateName, String capital, String cityOne, String cityTwo ) {
+    public Question( String stateName, String capitalCity, String secondCity, String thirdCity ) {
         this.id = -1;  // the primary key id will be set by a setter method
         this.stateName = stateName;
-        this.capital = capital;
-        this.cityOne = cityOne;
-        this.cityTwo = cityTwo;
+        this.capitalCity = capitalCity;
+        this.secondCity = secondCity;
+        this.thirdCity = thirdCity;
     }
 
     public long getId()
@@ -52,38 +52,38 @@ public class Question {
         this.stateName = stateName;
     }
 
-    public String getCapital()
+    public String getCapitalCity()
     {
-        return capital;
+        return capitalCity;
     }
 
-    public void setCapital(String capital)
+    public void setCapitalCity(String capitalCity)
     {
-        this.capital = capital;
+        this.capitalCity = capitalCity;
     }
 
-    public String getCityOne()
+    public String getSecondCity()
     {
-        return cityOne;
+        return secondCity;
     }
 
-    public void setCityOne(String cityOne)
+    public void setSecondCity(String secondCity)
     {
-        this.cityOne = cityOne;
+        this.secondCity = secondCity;
     }
 
-    public String getCityTwo()
+    public String getThirdCity()
     {
-        return cityTwo;
+        return thirdCity;
     }
 
-    public void setCityTwo(String cityTwo)
+    public void setThirdCity(String thirdCity)
     {
-        this.cityTwo = cityTwo;
+        this.thirdCity = thirdCity;
     }
 
     public String toString()
     {
-        return id + ": " + stateName + " " + capital + " " + cityOne + " " + cityTwo;
+        return id + ": " + stateName + " " + capitalCity + " " + secondCity + " " + thirdCity;
     }
 }

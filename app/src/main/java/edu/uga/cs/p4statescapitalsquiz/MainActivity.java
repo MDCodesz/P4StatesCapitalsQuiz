@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button stateButton = findViewById(R.id.button);
         stateButton.setOnClickListener(new ButtonClickListener());
+
     }
 
     private class ButtonClickListener implements View.OnClickListener {

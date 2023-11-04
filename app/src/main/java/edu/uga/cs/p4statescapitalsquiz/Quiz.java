@@ -1,23 +1,26 @@
 package edu.uga.cs.p4statescapitalsquiz;
 
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Quiz {
     private long   id;
-    private Date quizDate;
-    private Time quizTime;
+    private String quizDate;
+    private String quizTime;
     private Integer quizResult; // int?
 
     public Quiz()
     {
         this.id = -1;
-        this.quizDate = null;
-        this.quizTime = null;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy"); // Define the date format
+        SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm"); // Define the time format
+        this.quizDate = dateFormat.format(new Date()); // Set the current date in the desired format
+        this.quizTime = timeFormat.format(new Date()); // Set the current time in the desired format
         this.quizResult = null;
     }
 
-    public Quiz( Date quizDate, Time quizTime, Integer quizResult ) {
+    public Quiz( String quizDate, String quizTime, Integer quizResult ) {
         this.id = -1;  // the primary key id will be set by a setter method
         this.quizDate = quizDate;
         this.quizTime = quizTime;
@@ -34,22 +37,22 @@ public class Quiz {
         this.id = id;
     }
 
-    public Date getQuizDate()
+    public String getQuizDate()
     {
         return quizDate;
     }
 
-    public void setQuizDate(Date quizDate)
+    public void setQuizDate(String quizDate)
     {
         this.quizDate = quizDate;
     }
 
-    public Time getQuizTime()
+    public String getQuizTime()
     {
         return quizTime;
     }
 
-    public void setQuizTime(Time quizTime)
+    public void setQuizTime(String quizTime)
     {
         this.quizTime = quizTime;
     }
